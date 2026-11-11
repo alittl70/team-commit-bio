@@ -88,3 +88,83 @@ button {
 button:hover {
     background: #0056b3;
 }
+
+/* ===== Alanah Little's bio card  ===== */
+#alanah-card {
+    background: linear-gradient(160deg, #fff0f5 0%, #f1ebff 100%);
+    border: 2px solid #e3d6ff;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+#alanah-card:hover {
+    transform: scale(1.04) rotate(-0.5deg);
+    box-shadow: 0 8px 24px rgba(123, 92, 255, 0.25);
+}
+#alanah-card .al-avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    padding: 4px;
+    background: linear-gradient(135deg, #ff8fab, #7b5cff);
+}
+#alanah-card h2 {
+    font-family: 'DM Serif Display', Georgia, serif;
+    color: #4b2c8f;
+    font-size: 1.8em;
+    margin-top: 10px;
+}
+#alanah-card .al-role {
+    color: #d6457a;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+#alanah-card button {
+    background: #7b5cff;
+    border-radius: 20px;
+}
+#alanah-card button:hover {
+    background: #d6457a;
+}
+#alanah-card .bio {
+    color: #4a4060;
+    line-height: 1.5;
+    text-align: left;
+}
+
+/* Moodboard */
+#alanah-card .al-mood-title {
+    font-family: 'DM Serif Display', Georgia, serif;
+    color: #4b2c8f;
+    margin: 18px 0 8px;
+}
+#alanah-card .al-moodboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+#alanah-card .al-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70px;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 0.75em;
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+#alanah-card .al-tile:hover {
+    transform: translateY(-4px) rotate(2deg);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+#alanah-card .al-icon {
+    font-size: 1.6em;
+    margin-bottom: 4px;
+}
+#alanah-card .al-pink   { background: #ff8fab; }
+#alanah-card .al-purple { background: #7b5cff; }
+#alanah-card .al-blue   { background: #3fa7d6; }
+#alanah-card .al-dark   { background: #2b2140; }
+#alanah-card .al-note   { background: #fff6b8; color: #4a4060; }
+#alanah-card .al-meme   { background: #fff; color: #4a4060; border: 2px dashed #ff8fab; font-style: italic; }
