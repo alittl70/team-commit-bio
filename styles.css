@@ -93,6 +93,7 @@ button:hover {
 #josh-bio{
     background: darkslategrey;
     color: white;
+    font-family: Calibri;
 }
 
 .profile-pic {
@@ -112,4 +113,37 @@ button:hover {
     display: none;
     margin-top: 10px;
     color: white;
+}
+
+#josh-bio .moodboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#josh-bio .moodboard-grid li {
+    display: flex;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    justify-self: center;
+}
+
+#josh-bio .moodboard-grid img {
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+}
+
+#josh-bio .moodboard-grid .single-item {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 150px;
+}
+
+#josh-bio .moodboard-grid .single-item img {
+    display: block;
+    margin: 0 auto;
 }
