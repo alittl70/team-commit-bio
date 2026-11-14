@@ -244,3 +244,85 @@ button:hover {
 #oliver-card .op-pink   { background: #ff8fab; }
 #oliver-card .op-purple { background: #7b5cff; }
 #oliver-card .op-note   { background: #fff6b8; color: #4a4060; }
+
+/* ===== Micah's bio card  ===== */
+#micah-card {
+    background: linear-gradient(160deg, #faf3ee 0%, #f3dfe4 100%);
+    border: 2px solid #1b2a49;
+    font-family: 'Poppins', Arial, sans-serif;
+    flex: 1 1 calc(30% - 40px);
+    min-width: 0;
+}
+#micah-card:hover {
+    transform: scale(1.04) rotate(-0.5deg);
+    box-shadow: 0 8px 24px rgba(122, 31, 61, 0.3);
+}
+#micah-card .mp-avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 4px;
+    background: linear-gradient(135deg, #7a1f3d, #1b2a49);
+}
+#micah-card h2 {
+    font-family: 'DM Serif Display', Georgia, serif;
+    color: #1b2a49;
+    font-size: 1.8em;
+    margin-top: 10px;
+}
+#micah-card .mp-role {
+    color: #7a1f3d;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+#micah-card button {
+    background: #1b2a49;
+    border-radius: 20px;
+}
+#micah-card button:hover {
+    background: #7a1f3d;
+}
+#micah-card .bio {
+    color: #2b2f45;
+    line-height: 1.5;
+    text-align: left;
+}
+
+/*Moodboard*/
+#micah-card .mp-mood-title {
+    font-family: 'DM Serif Display', Georgia, serif;
+    color: #7a1f3d;
+    margin: 18px 0 8px;
+}
+#micah-card .mp-moodboard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+#micah-card .mp-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 0.75em;
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+#micah-card .mp-tile:hover {
+    transform: translateY(-4px) rotate(2deg);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+#micah-card .mp-icon {
+    font-size: 1.6em;
+    margin-bottom: 4px;
+}
+#micah-card .mp-color1 { background: #7a1f3d; }
+#micah-card .mp-color2 { background: #1b2a49; }
+#micah-card .mp-color3 { background: #2f4b8a; }
+#micah-card .mp-color4 { background: #c45c7a; }
+#micah-card .mp-note   { background: #f6e7c1; color: #4e1226; }
