@@ -227,6 +227,113 @@ button:hover {
 #alanah-card .al-note   { background: #fff6b8; color: #4a4060; }
 #alanah-card .al-meme   { background: #fff; color: #4a4060; border: 2px dashed #ff8fab; font-style: italic; }
 
+
+
+/* ===== Majiri's cybersecurity bio card ===== */
+#majiri-card {
+    background: linear-gradient(145deg, #1c1420, #451b32);
+    border: 2px solid #c9a45c;
+    color: #fff5e9;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+#majiri-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(90, 25, 55, 0.3);
+}
+
+/* Avatar */
+#majiri-card .maj-avatar {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #752c50, #301629);
+    border: 3px solid #d4af70;
+    font-size: 3em;
+}
+
+/* Name and role */
+#majiri-card h2 {
+    color: #f5d9a5;
+    font-size: 1.7em;
+    margin-bottom: 10px;
+}
+
+#majiri-card .maj-role {
+    color: #e5b8c9;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Bio button */
+#majiri-card button {
+    background: #a44368;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 20px;
+    transition: background 0.2s;
+}
+
+#majiri-card button:hover {
+    background: #c9a45c;
+    color: #21151d;
+}
+
+/* Hidden bio description */
+#majiri-card .bio {
+    color: #f4e5ec;
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* Moodboard title */
+#majiri-card .maj-mood-title {
+    color: #f5d9a5;
+    margin: 20px 0 12px;
+}
+
+/* Moodboard layout */
+#majiri-card .maj-moodboard {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+/* Moodboard tiles */
+#majiri-card .maj-moodboard a,
+#majiri-card .maj-moodboard div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 65px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #67304d;
+    color: #fff5e9;
+    text-decoration: none;
+    font-size: 0.85em;
+    overflow-wrap: anywhere;
+    transition: transform 0.2s, background 0.2s;
+}
+
+/* Moodboard hover effect */
+#majiri-card .maj-moodboard a:hover {
+    background: #a44368;
+    transform: translateY(-4px);
+}
+
+/* Alternate tile colors */
+#majiri-card .maj-moodboard > :nth-child(even) {
+    background: #815c48;
+}
+
+#majiri-card .maj-moodboard > :nth-child(even):hover {
+    background: #a44368;
+}
 #oliver-card {
     background: linear-gradient(160deg, #0f172a 0%, #1e3a8a 100%);
     border: 2px solid #9ff1f5;
