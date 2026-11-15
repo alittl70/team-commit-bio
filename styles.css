@@ -1,4 +1,4 @@
-/* General page styling */
+/* ===== General page styling ===== */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -6,7 +6,7 @@ body {
     padding: 0;
 }
 
-/* Header section styling */
+/* ===== Header ===== */
 header {
     background: #333;
     color: #fff;
@@ -14,13 +14,11 @@ header {
     text-align: center;
 }
 
-/* Styling for team logo image */
 .team-logo {
     width: 150px; /* Adjust the size as needed */
     margin-top: 10px;
 }
 
-/* Menu button styling */
 header nav {
     margin-top: 10px;
 }
@@ -39,29 +37,42 @@ header nav button:hover {
     background: #0056b3;
 }
 
-/* Flex container for team bios and vision sections */
+/* ===== Layout: container holds the cards ===== */
 .container {
-    width: 80%;
+    width: 90%;
+    max-width: 1200px;
     margin: 20px auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;   /* centers the second row of 2 cards */
+    gap: 20px;                 /* even spacing between all cards */
 }
 
-/* Card styling for individual team bios */
+/* ===== Shared card styling (every bio card uses this) ===== */
 .card {
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 10px;
+    margin: 0;                           /* spacing comes from gap */
     padding: 20px;
-    flex: 1 1 calc(30% - 40px);
+    box-sizing: border-box;              /* padding/border count inside the width */
+    flex: 0 0 calc((100% - 40px) / 3);   /* exactly 3 cards per row */
+    min-width: 0;                        /* lets content shrink instead of forcing a wrap */
+    overflow-wrap: break-word;
     text-align: center;
     transition: transform 0.2s;
 }
 
 .card:hover {
     transform: scale(1.05);
+}
+
+/* Fewer cards per row on smaller screens */
+@media (max-width: 900px) {
+    .card { flex-basis: calc((100% - 20px) / 2); }
+}
+@media (max-width: 600px) {
+    .card { flex-basis: 100%; }
 }
 
 h2 {
@@ -75,7 +86,7 @@ h2 {
     color: #555;
 }
 
-/* Button styling */
+/* Default button styling */
 button {
     background: #007BFF;
     color: white;
@@ -89,23 +100,19 @@ button:hover {
     background: #0056b3;
 }
 
-/* Josh Bio Styling */
-#josh-bio{
+/* ===== Joshua's bio card ===== */
+#josh-bio {
     background: darkslategrey;
     color: white;
-    font-family: Calibri;
+    font-family: Calibri, Arial, sans-serif;
 }
 
-.profile-pic {
+#josh-bio .profile-pic {
+    display: block;
     width: 120px;
     height: 120px;
+    margin: 0 auto;
     border-radius: 50%;
-    overflow: hidden;
-}
-
-.profile-pic img {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
 }
 
@@ -115,6 +122,7 @@ button:hover {
     color: white;
 }
 
+/* Moodboard */
 #josh-bio .moodboard-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -123,6 +131,7 @@ button:hover {
     padding: 0;
     margin: 0;
 }
+
 #josh-bio .moodboard-grid li {
     display: flex;
     background-color: white;
@@ -147,7 +156,8 @@ button:hover {
     display: block;
     margin: 0 auto;
 }
-/* ===== Alanah Little's bio card  ===== */
+
+/* ===== Alanah Little's bio card ===== */
 #alanah-card {
     background: linear-gradient(160deg, #fff0f5 0%, #f1ebff 100%);
     border: 2px solid #e3d6ff;
@@ -161,6 +171,7 @@ button:hover {
     width: 110px;
     height: 110px;
     border-radius: 50%;
+    object-fit: cover;
     padding: 4px;
     background: linear-gradient(135deg, #ff8fab, #7b5cff);
 }
@@ -227,126 +238,21 @@ button:hover {
 #alanah-card .al-note   { background: #fff6b8; color: #4a4060; }
 #alanah-card .al-meme   { background: #fff; color: #4a4060; border: 2px dashed #ff8fab; font-style: italic; }
 
-
-
-/* ===== Majiri's cybersecurity bio card ===== */
-#majiri-card {
-    background: linear-gradient(145deg, #1c1420, #451b32);
-    border: 2px solid #c9a45c;
-    color: #fff5e9;
-    font-family: 'Segoe UI', Arial, sans-serif;
-}
-
-#majiri-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(90, 25, 55, 0.3);
-}
-
-/* Avatar */
-#majiri-card .maj-avatar {
-    width: 100px;
-    height: 100px;
-    margin: 0 auto 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #752c50, #301629);
-    border: 3px solid #d4af70;
-    font-size: 3em;
-}
-
-/* Name and role */
-#majiri-card h2 {
-    color: #f5d9a5;
-    font-size: 1.7em;
-    margin-bottom: 10px;
-}
-
-#majiri-card .maj-role {
-    color: #e5b8c9;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-}
-
-/* Bio button */
-#majiri-card button {
-    background: #a44368;
-    color: white;
-    border-radius: 20px;
-    padding: 10px 20px;
-    transition: background 0.2s;
-}
-
-#majiri-card button:hover {
-    background: #c9a45c;
-    color: #21151d;
-}
-
-/* Hidden bio description */
-#majiri-card .bio {
-    color: #f4e5ec;
-    line-height: 1.6;
-    text-align: left;
-}
-
-/* Moodboard title */
-#majiri-card .maj-mood-title {
-    color: #f5d9a5;
-    margin: 20px 0 12px;
-}
-
-/* Moodboard layout */
-#majiri-card .maj-moodboard {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
-}
-
-/* Moodboard tiles */
-#majiri-card .maj-moodboard a,
-#majiri-card .maj-moodboard div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 65px;
-    padding: 10px;
-    border-radius: 10px;
-    background: #67304d;
-    color: #fff5e9;
-    text-decoration: none;
-    font-size: 0.85em;
-    overflow-wrap: anywhere;
-    transition: transform 0.2s, background 0.2s;
-}
-
-/* Moodboard hover effect */
-#majiri-card .maj-moodboard a:hover {
-    background: #a44368;
-    transform: translateY(-4px);
-}
-
-/* Alternate tile colors */
-#majiri-card .maj-moodboard > :nth-child(even) {
-    background: #815c48;
-}
-
-#majiri-card .maj-moodboard > :nth-child(even):hover {
-    background: #a44368;
-}
+/* ===== Oliver Powell's bio card ===== */
 #oliver-card {
     background: linear-gradient(160deg, #0f172a 0%, #1e3a8a 100%);
     border: 2px solid #9ff1f5;
     font-family: 'Poppins', Arial, sans-serif;
 }
 #oliver-card:hover {
-    transform: scale(1.1);
+    transform: scale(1.04);
     box-shadow: 0 8px 24px rgba(123, 92, 255, 0.25);
 }
 #oliver-card .op-avatar {
     width: 110px;
     height: 110px;
     border-radius: 50%;
+    object-fit: cover;
     padding: 4px;
     background: linear-gradient(135deg, #000000, #ffffff);
 }
@@ -410,13 +316,114 @@ button:hover {
 #oliver-card .op-purple { background: #7b5cff; }
 #oliver-card .op-note   { background: #fff6b8; color: #4a4060; }
 
-/* ===== Micah's bio card  ===== */
+/* ===== Majiri's cybersecurity bio card ===== */
+#majiri-card {
+    background: linear-gradient(145deg, #1c1420, #451b32);
+    border: 2px solid #c9a45c;
+    color: #fff5e9;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+#majiri-card:hover {
+    transform: scale(1.04);
+    box-shadow: 0 10px 25px rgba(90, 25, 55, 0.3);
+}
+
+/* Avatar */
+#majiri-card .maj-avatar {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #752c50, #301629);
+    border: 3px solid #d4af70;
+    font-size: 3em;
+}
+
+/* Name and role */
+#majiri-card h2 {
+    color: #f5d9a5;
+    font-size: 1.7em;
+    margin-bottom: 10px;
+}
+
+#majiri-card .maj-role {
+    color: #e5b8c9;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Bio button */
+#majiri-card button {
+    background: #a44368;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 20px;
+    transition: background 0.2s;
+}
+
+#majiri-card button:hover {
+    background: #c9a45c;
+    color: #21151d;
+}
+
+/* Hidden bio description */
+#majiri-card .bio {
+    color: #f4e5ec;
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* Moodboard */
+#majiri-card .maj-mood-title {
+    color: #f5d9a5;
+    margin: 20px 0 12px;
+}
+
+#majiri-card .maj-moodboard {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+#majiri-card .maj-moodboard a,
+#majiri-card .maj-moodboard div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 65px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #67304d;
+    color: #fff5e9;
+    text-decoration: none;
+    font-size: 0.85em;
+    overflow-wrap: anywhere;
+    transition: transform 0.2s, background 0.2s;
+}
+
+#majiri-card .maj-moodboard a:hover {
+    background: #a44368;
+    transform: translateY(-4px);
+}
+
+/* Alternate tile colors */
+#majiri-card .maj-moodboard > :nth-child(even) {
+    background: #815c48;
+}
+
+#majiri-card .maj-moodboard > :nth-child(even):hover {
+    background: #a44368;
+}
+
+/* ===== Micah's bio card ===== */
 #micah-card {
     background: linear-gradient(160deg, #faf3ee 0%, #f3dfe4 100%);
     border: 2px solid #1b2a49;
     font-family: 'Poppins', Arial, sans-serif;
-    flex: 1 1 calc(30% - 40px);
-    min-width: 0;
 }
 #micah-card:hover {
     transform: scale(1.04) rotate(-0.5deg);
@@ -454,7 +461,7 @@ button:hover {
     text-align: left;
 }
 
-/*Moodboard*/
+/* Moodboard */
 #micah-card .mp-mood-title {
     font-family: 'DM Serif Display', Georgia, serif;
     color: #7a1f3d;
