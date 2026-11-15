@@ -22,8 +22,36 @@
 
 <!-- Team bios section (default section) -->
 <div id="bios" class="container">
-    <!-- Each card represents an individual team member -->
-        <!-- ===== Alanah Little's bio card ===== -->
+
+    <!-- ===== Joshua's bio card ===== -->
+    <div id="josh-bio" class="card">
+        <img src="img/Joshua.jpg" alt="Josh" class="profile-pic">
+        <h2>Joshua Blakeney</h2>
+        <p>Frontend Developer</p>
+        <button onclick="toggleBio('bio-josh')">Show Bio</button>
+        <div id="bio-josh" class="bio">
+            <p>Joshua is a talented student with experience in HTML, Python, JavaScript, and more.</p>
+            <section class="moodboard">
+                <h3>CS Experience</h3>
+                <ul class="moodboard-grid">
+                    <li><img src="img/python-5-logo.png" alt="Python Logo"></li>
+                    <li><img src="img/JavaScript-logo.png" alt="JavaScript Logo"></li>
+                    <li><img src="img/HTML_logo.png" alt="HTML Logo"></li>
+                    <li><img src="img/Java-logo.png" alt="Java Logo"></li>
+                    <li><img src="img/C++_logo.png" alt="C++ Logo"></li>
+                    <li><img src="img/React-logo.png" alt="React Logo"></li>
+                    <li class="single-item">
+                        <a href="https://github.com/JoshuaDev888" target="_blank">
+                            <img src="img/github.png" alt="GitHub">
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <!-- ===== end Joshua's card ===== -->
+
+    <!-- ===== Alanah Little's bio card ===== -->
     <div class="card" id="alanah-card">
         <img src="img/alanah-avatar.svg" alt="Alanah's avatar" class="al-avatar">
         <h2>Alanah Little</h2>
@@ -69,6 +97,7 @@
         </div>
     </div>
     <!-- ===== end Alanah's card ===== -->
+
     <!-- ===== Oliver Powell's bio card ===== -->
     <div class="card" id="oliver-card">
         <img src="img/op-logo.svg" alt="Oliver's avatar" class="op-avatar">
@@ -76,7 +105,7 @@
         <p class="op-role">Product Owner &amp; Backend Engineer</p>
         <button onclick="toggleBio('bio-oliver')">Show Bio</button>
         <p id="bio-oliver" class="bio">
-        I'm a sophomore in Computer Science with a concentration in Systems and Networks. I love learning about how computers work best and designing code to utilize their max efficiency.
+            I'm a sophomore in Computer Science with a concentration in Systems and Networks. I love learning about how computers work best and designing code to utilize their max efficiency.
         </p>
 
         <!-- Moodboard: CS inspirations, tools, and links -->
@@ -98,16 +127,44 @@
     </div>
     <!-- ===== end Oliver's card ===== -->
 
+    <!-- ===== Majiri's bio card ===== -->
+    <div class="card" id="majiri-card">
+        <div class="maj-avatar">👩🏾‍💻</div>
+        <h2>Majiri Evhi-Eyeghre</h2>
+        <p class="maj-role">Cybersecurity &amp; Software Development</p>
+        <button onclick="toggleBio('bio-majiri')">Show Bio</button>
+        <p id="bio-majiri" class="bio">
+            I'm a senior studying Computer Science with a concentration
+            in Cybersecurity. I'm passionate about protecting digital
+            systems, solving problems, and developing secure, reliable
+            applications. I enjoy working with Python, Java, and web
+            technologies while continuing to grow my skills in
+            cybersecurity and software development.
+        </p>
+
+        <!-- Moodboard: CS inspirations, tools, and links -->
+        <h3 class="maj-mood-title">My Moodboard</h3>
+        <div class="maj-moodboard">
+            <a href="https://www.python.org" target="_blank">🐍 Python</a>
+            <a href="https://owasp.org" target="_blank">🔐 Cybersecurity</a>
+            <a href="https://react.dev" target="_blank">⚛️ React</a>
+            <a href="https://github.com" target="_blank">💻 GitHub</a>
+            <a href="https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/" target="_blank">🛡️ Secure Coding</a>
+            <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development" target="_blank">🌐 Web Development</a>
+        </div>
+    </div>
+    <!-- ===== end Majiri's card ===== -->
+
     <!-- ===== Micah's bio card ===== -->
     <div class="card" id="micah-card">
         <img src="img/micah-avatar.svg" alt="Micah's avatar" class="mp-avatar">
         <h2>Micah Platte</h2>
-        <p class="mp-role">Scrum Master & Developer</p>
+        <p class="mp-role">Scrum Master &amp; Developer</p>
         <button onclick="toggleBio('bio-micah')">Show Bio</button>
         <p id="bio-micah" class="bio">
-            I'm a senior in Computer Science this year, concentrating in AI, Robotics, and Gaming! 
-            I love using programming as a means of creation and do so through game development primarily. 
-            I integrate art into my development process as much as possible to produce a product that boths looks good and runs smoothly.
+            I'm a senior in Computer Science this year, concentrating in AI, Robotics, and Gaming!
+            I love using programming as a means of creation and do so through game development primarily.
+            I integrate art into my development process as much as possible to produce a product that both looks good and runs smoothly.
         </p>
 
         <!-- Moodboard: CS inspirations, tools, and links -->
@@ -117,7 +174,7 @@
                 <span class="mp-icon">🐙</span>My GitHub
             </a>
             <a class="mp-tile mp-color2" href="https://www.linkedin.com/in/micah-platte" target="_blank">
-                <span class="xx-icon">💼</span>LinkedIn
+                <span class="mp-icon">💼</span>LinkedIn
             </a>
             <a class="mp-tile mp-color3" href="https://mplatte-star.itch.io/" target="_blank">
                 <span class="mp-icon">👾</span>My Itch.io
@@ -134,7 +191,11 @@
 <!-- Team vision/mission statement section (hidden by default) -->
 <div id="vision" class="container" style="display: none;">
     <h2>Our Mission Statement</h2>
-    <p>We strive to create a collaborative, inclusive, and innovative environment where team members feel empowered to push boundaries and achieve excellence in their craft. Our mission is to deliver high-quality solutions that meet and exceed our clients' expectations.</p>
+    <p>We are a team of computer scientists who believe great software is both well-engineered
+        and thoughtfully designed. Our strengths span user experience, front-end and game development,
+        systems and backend engineering, and cybersecurity, and we bring them together to build
+        products that are creative, secure, and enjoyable to use.
+    </p>
 </div>
 
 <script src="script.js"></script> <!-- Link to external JavaScript file -->
